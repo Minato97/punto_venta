@@ -15,6 +15,17 @@ return new class extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
+            $table->decimal('monto_total');
+            $table->foreignId('id_clientes')
+                ->nullable()
+                ->contrained('clientes')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+            $table->foreignId('id_estatus')
+                ->nullable()
+                ->contrained('estatus')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

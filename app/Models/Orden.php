@@ -9,7 +9,7 @@ class Orden extends Model
 {
     protected $table = 'ordenes';
     protected $fillable = [
-        'productos_id',
-        'ventas_id'
+        'id_productos',
+        'id_ventas'
     ];
 }

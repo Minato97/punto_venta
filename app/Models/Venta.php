@@ -11,8 +11,8 @@ class Venta extends Model
     protected $fillable = [
         'id',
         'monto_total',
-        'clientes_id',
-        'estatus_id'
+        'id_clientes',
+        'id_estatus'
     ];
 
 public function clientesRel(){

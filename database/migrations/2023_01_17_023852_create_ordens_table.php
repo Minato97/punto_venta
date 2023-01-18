@@ -13,8 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ordens', function (Blueprint $table) {
+        Schema::create('ordenes', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_productos')
+                ->contrained('productos')
+                ->nullable()
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+            $table->foreignId('id_ventas')
+                ->nullable()
+                ->contrained('ventas')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

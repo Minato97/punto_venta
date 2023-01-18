@@ -12,7 +12,7 @@ class Producto extends Model
         'id',
         'producto',
         'precio',
-        'categorias_id'
+        'id_categorias'
     ];
     public function categoriasRel(){
         return $this->belongsTo(Categoria::class,'id_categorias');
