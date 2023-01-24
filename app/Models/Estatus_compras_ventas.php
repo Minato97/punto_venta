@@ -5,14 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Estatus extends Model
+class EstatusComprasVentas extends Model
 {
-protected $table ='estatus';
+protected $table ='estatus_compras_ventas';
 protected $fillable = [
     'id',
     'estatus'
 ];
-    public function ventasRel(){
+    public function ventas_estatusComprasVentas_Rel(){
         return $this->hasMany(Venta::class,'id');
     }
 }
