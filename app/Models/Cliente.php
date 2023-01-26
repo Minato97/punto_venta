@@ -16,7 +16,7 @@ class Cliente extends Model
         'email',
         'password'
     ];
-    public function ventasRel(){
+    public function ventas_clientes_Rel(){
         return $this->hasMany(Venta::class,'id');
     }
     /**
