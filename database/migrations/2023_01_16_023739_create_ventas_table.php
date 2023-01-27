@@ -26,6 +26,11 @@ return new class extends Migration
                 ->contrained('estatus')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('id_categoria')
+                ->nullable()
+                ->contrained('categorias_facturas')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }
