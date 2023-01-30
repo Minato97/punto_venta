@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('categoria_fatcturas', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('categoria_factura');
         });
     }
 
