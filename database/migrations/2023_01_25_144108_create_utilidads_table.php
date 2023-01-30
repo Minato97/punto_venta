@@ -13,8 +13,18 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('utilidads', function (Blueprint $table) {
+        Schema::create('utilidades', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_ingresos')
+                ->nullable()
+                ->constrained('ingresos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+            $table->foreignId('id_egresos')
+                ->nullable()
+                ->constrained('egresos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

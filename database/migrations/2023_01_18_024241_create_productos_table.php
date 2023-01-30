@@ -19,9 +19,10 @@ return new class extends Migration
             $table->decimal('precio');
             $table->foreignId('id_categorias')
                 ->nullable()
-                ->constrained('categorias')
+                ->constrained('categorias_productos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->decimal('costo');
             $table->timestamps();
         });
     }

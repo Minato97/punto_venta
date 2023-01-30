@@ -15,6 +15,12 @@ return new class extends Migration
     {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('id_ventas')
+                ->nullable()
+                ->constrained('ventas')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+            $table->decimal('ingreso');
             $table->timestamps();
         });
     }

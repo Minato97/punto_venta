@@ -15,6 +15,18 @@ return new class extends Migration
     {
         Schema::create('inventarios', function (Blueprint $table) {
             $table->id();
+            $table->integer('stock');
+            $table->decimal('monto');
+            $table->foreignId('id_productos')
+                ->nullable()
+                ->constrained('productos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
+            $table->foreignId('id_almacenes')
+                ->nullable()
+                ->constrained('almacenes')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }
