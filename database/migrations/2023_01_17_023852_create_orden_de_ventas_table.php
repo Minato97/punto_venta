@@ -13,24 +13,19 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ventas', function (Blueprint $table) {
+        Schema::create('ordenesDeVenta', function (Blueprint $table) {
             $table->id();
-            $table->decimal('montoTotal');
-            $table->foreignId('id_clientes')
+            $table->foreignId('id_productos')
+                ->contrained('productos')
                 ->nullable()
-                ->constrained('clientes')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('id_estatus')
+            $table->foreignId('id_ventas')
                 ->nullable()
-                ->constrained('estatus_compras_ventas')
+                ->contrained('ventas')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('id_categoria_factura')
-                ->nullable()
-                ->constrained('categorias_facturas')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
+            $table->integer('cantidad');
             $table->timestamps();
         });
     }
@@ -42,6 +37,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ventas');
+        Schema::dropIfExists('ordenesDeVenta');
     }
 };

@@ -16,6 +16,7 @@ return new class extends Migration
         Schema::create('almacenes', function (Blueprint $table) {
             $table->id();
             $table->string('almacen');
+            $table->string('descripción');
             $table->timestamps();
         });
     }

@@ -15,10 +15,10 @@ return new class extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->id();
-            $table->integer('cantidad');
+            $table->decimal('montoTotal');
             $table->foreignId('id_estatus')
                 ->nullable()
-                ->constrained('estatus')
+                ->constrained('estatus_compras_ventas')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
             $table->foreignId('id_proveedores')

@@ -11,7 +11,8 @@ class Almacen extends Model
 
     protected $fillable = [
       'id',
-      'almacen'
+      'almacen',
+        'descripción'
     ];
 
     public function productosRel(){

@@ -12,7 +12,7 @@ class Venta extends Model
         'id',
         'monto_total',
         'id_clientes',
-        'id_estatus_compras_ventas',
+        'id_estatus',
         'id_categoria_factura'
     ];
 
@@ -28,7 +28,7 @@ public function estatusComprasVentas_ventas_Rel(){
     }
 
     public function productos_ventas_Rel(){
-        return $this->belongsToMany(Producto::class,'ordenes');
+        return $this->belongsToMany(Producto::class,'ordenes_de_venta');
     }
 
     public function categoriaFactura_ventas_Rel(){

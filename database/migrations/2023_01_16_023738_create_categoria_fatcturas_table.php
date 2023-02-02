@@ -13,7 +13,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('categoria_fatcturas', function (Blueprint $table) {
+        Schema::create('categorias_facturas', function (Blueprint $table) {
             $table->id();
             $table->string('categoria_factura');
         });

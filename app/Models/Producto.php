@@ -19,14 +19,14 @@ class Producto extends Model
     }
 
     public function ventas_productos_Rel(){
-        return $this->belongsToMany(Venta::class,'ordenes');
+        return $this->belongsToMany(Venta::class,'ordenes_de_venta');
     }
 
     public function almacenes_productos_Rel(){
-        return $this->belongsToMany(Almacen::class,'almacenes');
+        return $this->belongsToMany(Almacen::class,'inventarios');
     }
 
-    public function proveedores_productos_Rel(){
-        return $this->belongsToMany(Proveedor::class,'compras');
+    public function compras_productos_Rel(){
+        return $this->belongsToMany(Compra::class,'ordenes_de_Compra');
     }
 }

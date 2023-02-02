@@ -13,9 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('estatus', function (Blueprint $table) {
+        Schema::create('estatus_compras_ventas', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria');
+            $table->string('estatus');
         });
     }
 
@@ -26,6 +26,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('estatuses');
+        Schema::dropIfExists('estatus');
     }
 };

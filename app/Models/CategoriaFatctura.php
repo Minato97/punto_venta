@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class CategoriaFatctura extends Model
 {
-    protected $table = 'categorias_facturas';
+    protected $table = 'categorias_factura';
 
     protected $fillable = [
         'id',
