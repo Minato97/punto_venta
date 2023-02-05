@@ -31,6 +31,11 @@ return new class extends Migration
                 ->constrained('categorias_facturas')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('id_descuentos')
+                ->nullable()
+                ->constrained('descuentos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

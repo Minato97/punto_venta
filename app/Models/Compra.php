@@ -13,13 +13,16 @@ class Compra extends Model
         'id',
         'id_proveedores',
         'id_estatus_compras_ventas',
-        'montoTotal'
+        'montoTotal',
+        'id_descuento'
     ];
 
     public function estatusComprasVentas_compras_Rel(){
         return $this->belongsTo(EstatusComprasventas::class,'id_estatus_compras_ventas');
     }
-
+    public function descuentos_compras_Rel(){
+        return $this->belongsTo(Descuento::class,'id_descuento');
+    }
 
     public function egresos_compras_Rel(){
         return $this->hasMany(Egreso::class,'id');

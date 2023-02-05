@@ -31,6 +31,11 @@ return new class extends Migration
                 ->constrained('productos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('id_descuentos')
+                ->nullable()
+                ->constrained('descuentos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

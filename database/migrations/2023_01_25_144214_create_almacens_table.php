@@ -16,8 +16,8 @@ return new class extends Migration
         Schema::create('almacenes', function (Blueprint $table) {
             $table->id();
             $table->string('almacen');
-            $table->string('descripción');
-            $table->timestamps();
+            $table->string('descripcion',1000);
+
         });
     }
 
@@ -28,6 +28,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('almacens');
+        Schema::dropIfExists('almacenes');
     }
 };

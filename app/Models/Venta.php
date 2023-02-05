@@ -13,7 +13,8 @@ class Venta extends Model
         'monto_total',
         'id_clientes',
         'id_estatus',
-        'id_categoria_factura'
+        'id_categoria_factura',
+        'id_descuentos'
     ];
 
 public function clientes_ventas_Rel(){
@@ -23,6 +24,9 @@ public function clientes_ventas_Rel(){
 public function estatusComprasVentas_ventas_Rel(){
     return $this->belongsTo(EstatusComprasventas::class,'id_estatus_compras_ventas');
 }
+    public function descuentos_ventas_Rel(){
+        return $this->belongsTo(Descuento::class,'id_descuento');
+    }
     public function ingresos_ventas_Rel(){
         return $this->hasMany(Ingreso::class,'id');
     }

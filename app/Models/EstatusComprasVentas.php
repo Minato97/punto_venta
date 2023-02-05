@@ -12,7 +12,10 @@ protected $fillable = [
     'id',
     'estatus'
 ];
-    public function ventas_estatusComprasVentas_Rel(){
+    public function ventas_estatus_compras_ventas_Rel(){
         return $this->hasMany(Venta::class,'id');
+    }
+    public function compras_estatus_compras_ventas_Rel(){
+        return $this->hasMany(compra::class,'id');
     }
 }
