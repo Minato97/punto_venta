@@ -16,15 +16,9 @@ class CategoriaSeeder extends Seeder
     public function run()
     {
         $data = [
-        [
-            'categoria' => 'bebidas frias'
-        ],
             [
-                'categoria' => 'bebidas calientes'
-            ],
-            [
-                'categoria' => 'bocadillos'
-                ]
+                'categoria' => 'otra'
+            ]
             ];
 
         DB::table('categorias_productos')->insert($data);
