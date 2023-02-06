@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class ProductoSeeder extends Seeder
 {
@@ -14,6 +15,14 @@ class ProductoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $data = [
+            [
+                'producto' => 'otro',
+                'precio' => 0.00,
+                'id_categorias' => 1,
+                'costo'=>0.00,
+            ]
+        ];
+        DB::table('productos')->insert($data);
     }
 }
