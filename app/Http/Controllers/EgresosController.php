@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Egreso;
 use Illuminate\Http\Request;
 
 class EgresosController extends Controller
@@ -13,7 +14,8 @@ class EgresosController extends Controller
      */
     public function index()
     {
-        //
+        $data = Egreso::with('compras_egresos_Rel')->get();
+        return $data;
     }
 
     /**

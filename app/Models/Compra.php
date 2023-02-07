@@ -12,16 +12,19 @@ class Compra extends Model
     protected $fillable = [
         'id',
         'id_proveedores',
-        'id_estatus_compras_ventas',
+        'id_estatus',
         'montoTotal',
-        'id_descuento'
+        'id_descuentos'
     ];
 
     public function estatusComprasVentas_compras_Rel(){
-        return $this->belongsTo(EstatusComprasventas::class,'id_estatus_compras_ventas');
+        return $this->belongsTo(EstatusComprasventas::class,'id_estatus');
     }
     public function descuentos_compras_Rel(){
-        return $this->belongsTo(Descuento::class,'id_descuento');
+        return $this->belongsTo(Descuento::class,'id_descuentos');
+    }
+    public function proveedores_compras_Rel(){
+        return $this->belongsTo(Proveedor::class,'id_proveedores');
     }
 
     public function egresos_compras_Rel(){

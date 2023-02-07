@@ -26,8 +26,7 @@ class AlmacenSeeder extends Seeder
             ],
             [
                 'almacen' => 'Preventas',
-                'descripcion' => 'En este almacén se registraran productos que tendremos proximamente pero que se pueden vender por adelantado y su entrega sera despues,
-                por lo general son productos que nosotros como empresa compramos por adelantado tambien a un proveedor'
+                'descripcion' => 'En este almacén se registraran productos que tendremos proximamente pero que se pueden vender por adelantado y su entrega sera despues, por lo general son productos que nosotros como empresa compramos por adelantado tambien a un proveedor'
             ],
             [
                 'almacen' => 'Proximos a caducar',
@@ -35,8 +34,7 @@ class AlmacenSeeder extends Seeder
             ],
             [
                 'almacen' => 'Prestamos',
-                'descripcion' => 'En este almacén se guardaran los productos que vendamos y que no tenemos en stock virtual pero si en fisico,
-                una vez se realice el registro en inventario y en almacen de disponibles se descontaran todas las cantidades que se encuentren en este almacen'
+                'descripcion' => 'En este almacén se guardaran los productos que vendamos y que no tenemos en stock virtual pero si en fisico, una vez se realice el registro en inventario y en almacen de disponibles se descontaran todas las cantidades que se encuentren en este almacen'
             ],
             [
                 'almacen' => 'Productos reacondicionados',

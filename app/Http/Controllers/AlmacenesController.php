@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Almacen;
 use Illuminate\Http\Request;
 
 class AlmacenesController extends Controller
@@ -13,7 +14,8 @@ class AlmacenesController extends Controller
      */
     public function index()
     {
-        //
+        $data = Almacen::all();
+        return $data;
     }
 
     /**

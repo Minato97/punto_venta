@@ -16,13 +16,13 @@ return new class extends Migration
         Schema::create('ordenesDeCompra', function (Blueprint $table) {
             $table->id();
             $table->foreignId('id_productos')
-                ->contrained('productos')
                 ->nullable()
+                ->constrained('productos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
             $table->foreignId('id_compras')
                 ->nullable()
-                ->contrained('compras')
+                ->constrained('compras')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
             $table->integer('cantidad');

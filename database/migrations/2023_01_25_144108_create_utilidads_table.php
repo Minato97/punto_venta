@@ -25,6 +25,7 @@ return new class extends Migration
                 ->constrained('egresos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->decimal('utilidad');
             $table->timestamps();
         });
     }

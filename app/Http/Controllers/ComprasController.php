@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Compra;
 use Illuminate\Http\Request;
 
 class ComprasController extends Controller
@@ -13,7 +14,8 @@ class ComprasController extends Controller
      */
     public function index()
     {
-        //
+        $data = Compra::with('descuentos_compras_Rel','estatusComprasVentas_compras_Rel','proveedores_compras_Rel')->get();
+        return $data;
     }
 
     /**

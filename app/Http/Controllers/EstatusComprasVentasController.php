@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\EstatusComprasVentas;
 use Illuminate\Http\Request;
 
 class EstatusComprasVentasController extends Controller
@@ -13,7 +14,8 @@ class EstatusComprasVentasController extends Controller
      */
     public function index()
     {
-        //
+        $data = EstatusComprasVentas::all();
+        return $data;
     }
 
     /**

@@ -26,11 +26,6 @@ return new class extends Migration
                 ->constrained('proveedores')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
-            $table->foreignId('id_productos')
-                ->nullable()
-                ->constrained('productos')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
             $table->foreignId('id_descuentos')
                 ->nullable()
                 ->constrained('descuentos')

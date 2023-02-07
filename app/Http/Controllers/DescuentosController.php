@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Descuento;
 use Illuminate\Http\Request;
 
 class DescuentosController extends Controller
@@ -13,7 +14,8 @@ class DescuentosController extends Controller
      */
     public function index()
     {
-        //
+        $data = Descuento::all();
+        return $data;
     }
 
     /**

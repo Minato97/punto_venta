@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CategoriaProductos;
 use Illuminate\Http\Request;
 
 class CategoriasProductosController extends Controller
@@ -13,7 +14,8 @@ class CategoriasProductosController extends Controller
      */
     public function index()
     {
-        //
+        $data = CategoriaProductos::all();
+        return $data;
     }
 
     /**
