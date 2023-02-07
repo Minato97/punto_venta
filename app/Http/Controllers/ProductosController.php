@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use App\Models\Producto;
+
+
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -14,8 +16,12 @@ class ProductosController extends Controller
      */
     public function index()
     {
+
         $data = Producto::with('categoriasProductos_productos_Rel')->get();
         return $data;
+
+        //
+
     }
 
     /**
