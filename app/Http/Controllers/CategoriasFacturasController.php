@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\CategoriaFatctura;
+=======
+>>>>>>> origin/main
 use Illuminate\Http\Request;
 
 class CategoriasFacturasController extends Controller
@@ -14,8 +17,12 @@ class CategoriasFacturasController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $data = CategoriaFatctura::all();
         return $data;
+=======
+        //
+>>>>>>> origin/main
     }
 
     /**

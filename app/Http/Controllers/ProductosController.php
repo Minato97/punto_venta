@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+<<<<<<< HEAD
 use App\Models\Producto;
+=======
+>>>>>>> origin/main
 use Illuminate\Http\Request;
 
 class ProductosController extends Controller
@@ -14,8 +17,12 @@ class ProductosController extends Controller
      */
     public function index()
     {
+<<<<<<< HEAD
         $data = Producto::with('categoriasProductos_productos_Rel')->get();
         return $data;
+=======
+        //
+>>>>>>> origin/main
     }
 
     /**
