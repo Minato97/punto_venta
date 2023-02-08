@@ -19,7 +19,9 @@ class ProveedorSeeder extends Seeder
             [
                 'nombre' => 'Otro',
                 'telefono' => 'No aplica',
-                'direccion' => 'No aplica',
+                'calle' => 'No aplica',
+                'numero' => 00,
+                'codigo_postal' => 00,
                 'email'=>'No aplica',
             ]
         ];

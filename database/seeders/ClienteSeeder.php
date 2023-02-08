@@ -19,7 +19,9 @@ class ClienteSeeder extends Seeder
             [
                 'nombre'=> 'Público en general',
                 'telefono' => 'No aplica',
-                'direccion' => 'No aplica',
+                'calle' => 'No aplica',
+                'numero' => 00,
+                'codigo_postal' => 00,
                 'email'=> 'No aplica',
                 'password' => 'No aplica'
             ]

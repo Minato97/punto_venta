@@ -26,3 +26,4 @@ Route::get('clientes','App\Http\Controllers\ClientesController@index');
 Route::get('compras','App\Http\Controllers\ComprasController@index');
 Route::get('descuentos','App\Http\Controllers\DescuentosController@index');
 Route::get('egresos','App\Http\Controllers\EgresosController@index');
+Route::get('ingresos','App\Http\Controllers\IngresosController@index');

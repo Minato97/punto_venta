@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Ingreso;
 use Illuminate\Http\Request;
 
 class IngresosController extends Controller
@@ -13,7 +14,8 @@ class IngresosController extends Controller
      */
     public function index()
     {
-        //
+        $data = Ingreso::with('ventas_ingresos_Rel.clientes_ventas_Rel','ventas_ingresos_Rel.estatusComprasVentas_ventas_Rel','ventas_ingresos_Rel.descuentos_ventas_Rel','ventas_ingresos_Rel.categoriaFactura_ventas_Rel')->get();
+        return $data;
     }
 
     /**

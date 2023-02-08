@@ -14,7 +14,7 @@ class EgresosController extends Controller
      */
     public function index()
     {
-        $data = Egreso::with('compras_egresos_Rel')->get();
+        $data = Egreso::with('compras_egresos_Rel.descuentos_compras_Rel','compras_egresos_Rel.estatusComprasVentas_compras_Rel','compras_egresos_Rel.proveedores_compras_Rel')->get();
         return $data;
     }
 
