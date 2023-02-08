@@ -16,4 +16,12 @@ class Inventario extends Model
         'id_productos',
         'id_almacenes'
     ];
+
+    public function productos_inventarios_Rel(){
+        return $this->belongsTo(Producto::class,'id_productos');
+    }
+
+    public function almacenes_inventarios_Rel(){
+        return $this->belongsTo(Almacen::class,'id_almacenes');
+    }
 }

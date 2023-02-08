@@ -14,4 +14,12 @@ class OrdenDeVenta extends Model
         'id_ventas',
         'cantidad'
     ];
+
+    public function productos_ordenDeVenta_Rel(){
+        return $this->belongsTo(Producto::class,'id_productos');
+    }
+
+    public function ventas_ordenDeVenta_Rel(){
+        return $this->belongsTo(Venta::class,'id_ventas');
+    }
 }

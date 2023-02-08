@@ -14,4 +14,13 @@ class OrdenDeCompra extends Model
         'id_compras',
         'cantidad'
     ];
+
+    public function productos_ordenDeCompra_Rel(){
+        return $this->belongsTo(Producto::class,'id_productos');
+    }
+
+    public function compras_ordenDeCompra_Rel(){
+        return $this->belongsTo(Compra::class,'id_compras');
+    }
+
 }

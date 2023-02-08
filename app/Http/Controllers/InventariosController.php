@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Inventario;
 use Illuminate\Http\Request;
 
 class InventariosController extends Controller
@@ -13,7 +14,8 @@ class InventariosController extends Controller
      */
     public function index()
     {
-        //
+        $data = Inventario::with('productos_inventarios_rel.categoriasProductos_productos_Rel','almacenes_inventarios_Rel')->get();
+        return $data;
     }
 
     /**

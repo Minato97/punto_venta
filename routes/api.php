@@ -27,3 +27,6 @@ Route::get('compras','App\Http\Controllers\ComprasController@index');
 Route::get('descuentos','App\Http\Controllers\DescuentosController@index');
 Route::get('egresos','App\Http\Controllers\EgresosController@index');
 Route::get('ingresos','App\Http\Controllers\IngresosController@index');
+Route::get('inventarios','App\Http\Controllers\InventariosController@index');
+Route::get('ordenesCompras','App\Http\Controllers\OrdenesCompraController@index');
+Route::get('ordenesVentas','App\Http\Controllers\OrdenesVentaController@index');

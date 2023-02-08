@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\OrdenDeCompra;
 use Illuminate\Http\Request;
 
 class OrdenesCompraController extends Controller
@@ -13,7 +14,8 @@ class OrdenesCompraController extends Controller
      */
     public function index()
     {
-        //
+        $data = OrdenDeCompra::with('productos_ordenDeCompra_Rel.categoriasProductos_productos_Rel','compras_ordenDeCompra_Rel')->get();
+        return $data;
     }
 
     /**
