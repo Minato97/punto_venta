@@ -14,7 +14,9 @@ class Proveedor extends Model
         'nombre',
         'telefono',
         'email',
-        'direccion'
+        'calle',
+        'numero',
+        'codigo_posttal'
     ];
 
     public function productos_proveedores_Rel(){

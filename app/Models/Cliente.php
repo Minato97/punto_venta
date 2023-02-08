@@ -12,7 +12,9 @@ class Cliente extends Model
         'id',
         'nombre',
         'telefono',
-        'direccion',
+        'calle',
+        'numero',
+        'codigo_postal',
         'email',
         'password'
     ];
