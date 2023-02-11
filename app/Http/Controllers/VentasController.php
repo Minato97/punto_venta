@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Venta;
 use Illuminate\Http\Request;
 
 class VentasController extends Controller
@@ -13,7 +14,8 @@ class VentasController extends Controller
      */
     public function index()
     {
-        //
+        $data = Venta::with('clientes_ventas_Rel','estatusComprasVentas_ventas_Rel','descuentos_ventas_Rel','categoriaFactura_ventas_Rel')->get();
+        return $data;
     }
 
     /**

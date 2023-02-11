@@ -30,3 +30,7 @@ Route::get('ingresos','App\Http\Controllers\IngresosController@index');
 Route::get('inventarios','App\Http\Controllers\InventariosController@index');
 Route::get('ordenesCompras','App\Http\Controllers\OrdenesCompraController@index');
 Route::get('ordenesVentas','App\Http\Controllers\OrdenesVentaController@index');
+Route::get('proveedores','App\Http\Controllers\ProveedoresController@index');
+Route::get('roles','App\Http\Controllers\RolesController@index');
+Route::get('utilidades','App\Http\Controllers\UtilidadesController@index');
+Route::get('ventas','App\Http\Controllers\VentasController@index');

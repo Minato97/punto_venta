@@ -22,10 +22,10 @@ public function clientes_ventas_Rel(){
 }
 
 public function estatusComprasVentas_ventas_Rel(){
-    return $this->belongsTo(EstatusComprasventas::class,'id_estatus_compras_ventas');
+    return $this->belongsTo(EstatusComprasventas::class,'id_estatus');
 }
     public function descuentos_ventas_Rel(){
-        return $this->belongsTo(Descuento::class,'id_descuento');
+        return $this->belongsTo(Descuento::class,'id_descuentos');
     }
     public function ingresos_ventas_Rel(){
         return $this->hasMany(Ingreso::class,'id');

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Utilidad;
 use Illuminate\Http\Request;
 
 class UtilidadesController extends Controller
@@ -13,7 +14,16 @@ class UtilidadesController extends Controller
      */
     public function index()
     {
-        //
+        $data = Utilidad::with(
+            'ingresos_utilidades_Rel.ventas_ingresos_Rel.clientes_ventas_Rel',
+            'ingresos_utilidades_Rel.ventas_ingresos_Rel.estatusComprasVentas_ventas_Rel',
+            'ingresos_utilidades_Rel.ventas_ingresos_Rel.descuentos_ventas_Rel',
+            'ingresos_utilidades_Rel.ventas_ingresos_Rel.categoriaFactura_ventas_Rel',
+            'egresos_utilidades_Rel.compras_egresos_Rel.proveedores_compras_Rel',
+            'egresos_utilidades_Rel.compras_egresos_Rel.estatusComprasVentas_compras_Rel',
+            'egresos_utilidades_Rel.compras_egresos_Rel.descuentos_compras_Rel',
+        )->get();
+        return $data;
     }
 
     /**
