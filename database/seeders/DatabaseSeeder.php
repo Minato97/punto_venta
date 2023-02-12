@@ -37,6 +37,7 @@ class DatabaseSeeder extends Seeder
         $this->call(IngresoSeeder::class);
         $this->call(InventarioSeeder::class);
         $this->call(UtilidadSeeder::class);
+        $this->call(UserSeeder::class);
 
     }
 }

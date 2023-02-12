@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class EgresosController extends Controller
 {
+    //    {
+//        $this->middleware('auth:api', ['except' => []]);
+//    }
     /**
      * Display a listing of the resource.
      *

@@ -27,6 +27,7 @@ return new class extends Migration
                 ->constrained('almacenes')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->date('fecha_caducidad');
             $table->timestamps();
         });
     }

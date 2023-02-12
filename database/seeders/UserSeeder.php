@@ -6,7 +6,7 @@ use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
-class InventarioSeeder extends Seeder
+class UserSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,13 +17,12 @@ class InventarioSeeder extends Seeder
     {
         $data = [
             [
-                'stock'=>1,
-                'monto'=>0.00,
-                'id_productos'=>1,
-                'id_almacenes'=>1,
-                'fecha_caducidad'=> '2023-01-01'
+                'username'=>'Admin',
+                'email'=>'admin@gmail.com',
+                'password'=>bcrypt('123456'),
+                'roles_id'=>1
             ]
         ];
-        DB::table('inventarios')->insert($data);
+        DB::table('users')->insert($data);
     }
 }
