@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ProveedoresController extends Controller
 {
+    //    {
+//        $this->middleware('auth:api', ['except' => []]);
+//    }
     /**
      * Display a listing of the resource.
      *

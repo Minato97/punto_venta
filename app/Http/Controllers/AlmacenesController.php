@@ -7,6 +7,10 @@ use Illuminate\Http\Request;
 
 class AlmacenesController extends Controller
 {
+    public function __construct()
+//    {
+//        $this->middleware('auth:api', ['except' => []]);
+//    }
     /**
      * Display a listing of the resource.
      *

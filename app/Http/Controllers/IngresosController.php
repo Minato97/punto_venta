@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class IngresosController extends Controller
 {
+    //    {
+//        $this->middleware('auth:api', ['except' => []]);
+//    }
     /**
      * Display a listing of the resource.
      *
@@ -14,7 +17,8 @@ class IngresosController extends Controller
      */
     public function index()
     {
-        $data = Ingreso::with('ventas_ingresos_Rel.clientes_ventas_Rel','ventas_ingresos_Rel.estatusComprasVentas_ventas_Rel','ventas_ingresos_Rel.descuentos_ventas_Rel','ventas_ingresos_Rel.categoriaFactura_ventas_Rel')->get();
+        $data = Ingreso::with('ventas_ingresos_Rel.clientes_ventas_Rel','ventas_ingresos_Rel.estatusComprasVentas_ventas_Rel',
+            'ventas_ingresos_Rel.descuentos_ventas_Rel','ventas_ingresos_Rel.categoriaFactura_ventas_Rel')->get();
         return $data;
     }
 
