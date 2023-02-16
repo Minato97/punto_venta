@@ -22,7 +22,7 @@
 
 </head>
 <body>
-<div id="app" class="wrapper @yield('wrapper')">
+<div class="wrapper @yield('wrapper')">
     @yield('layout')
 </div>
 

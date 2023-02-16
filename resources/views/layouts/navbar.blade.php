@@ -1,5 +1,5 @@
-<nav class="navbar navbar-main navbar-expand-lg px-0 mx-4 shadow-none border-radius-xl" id="navbarBlur"
-     data-scroll="true">
+<nav class="navbar navbar-main navbar-expand-lg px-1 my-3 mx-2 shadow-none border-radius-xl" id="navbarBlur"
+     data-scroll="true" style="background: linear-gradient(45deg, #001958, #BC4ED8, #FFFFC0)">
     <div class="container-fluid py-1 px-3">
         <nav aria-label="breadcrumb">
 

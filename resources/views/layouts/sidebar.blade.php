@@ -17,7 +17,7 @@
                 <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Punto de venta</h6>
             </li>
             <li class="nav-item">
-                <a class="nav-link text-white " href="#">
+                <a class="nav-link text-white " href="{{route('ventas')}}">
                     <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
                         <i class="material-icons opacity-10">dashboard</i>
                     </div>
