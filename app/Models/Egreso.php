@@ -12,14 +12,15 @@ class Egreso extends Model
     protected $fillable = [
         'id',
         'egreso',
-        'id_compras'
+
     ];
 
     public function compras_egresos_Rel(){
-        return $this->belongsTo(Compra::class,'id_compras');
+        return $this->hasMany(Compra::class,'id');
     }
 
-    public function ingresos_egresos_Rel(){
-        return $this->belongsToMany(Ingreso::class,'utilidades');
+
+    public function utilidades_egresos_Rel(){
+        return $this->hasOne(Utilidad::class,'id_utilidades');
     }
 }

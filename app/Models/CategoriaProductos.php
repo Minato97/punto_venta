@@ -10,7 +10,7 @@ class CategoriaProductos extends Model
     protected $table = 'categorias_productos';
     protected $fillable = [
         'id',
-        'categoria'
+        'categoria_productos'
         ];
 
      public function productos_categoria_Rel(){

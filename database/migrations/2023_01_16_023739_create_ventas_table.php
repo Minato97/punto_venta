@@ -36,6 +36,11 @@ return new class extends Migration
                 ->constrained('descuentos')
                 ->cascadeOnUpdate()
                 ->nullOnDelete();
+            $table->foreignId('id_ingresos')
+                ->nullable()
+                ->constrained('ingresos')
+                ->cascadeOnUpdate()
+                ->nullOnDelete();
             $table->timestamps();
         });
     }

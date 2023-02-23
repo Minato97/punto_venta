@@ -17,7 +17,6 @@ class EgresoSeeder extends Seeder
     {
         $data = [
             [
-                'id_compras'=>1,
                 'egreso'=>0.00
             ]
         ];

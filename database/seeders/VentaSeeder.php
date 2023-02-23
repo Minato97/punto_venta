@@ -21,7 +21,8 @@ class VentaSeeder extends Seeder
                 'id_clientes'=>1,
                 'id_estatus'=>1,
                 'id_categoria_factura'=>1,
-                'id_descuentos'=>1
+                'id_descuentos'=>1,
+                'id_ingresos'=>1
             ]
         ];
         DB::table('ventas')->insert($data);

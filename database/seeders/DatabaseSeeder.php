@@ -25,16 +25,16 @@ class DatabaseSeeder extends Seeder
         $this->call(DescuentoSeeder::class);
         $this->call(ClienteSeeder::class);
         $this->call(CategoriaSeeder::class);
+        $this->call(IngresoSeeder::class);
         $this->call(CategoriaFacturaSeeder::class);
         $this->call(VentaSeeder::class);
+        $this->call(EgresoSeeder::class);
         $this->call(ProveedorSeeder::class);
         $this->call(CompraSeeder::class);
         $this->call(AlmacenSeeder::class);
         $this->call(ProductoSeeder::class);
         $this->call(OrdenCompraSeeder::class);
         $this->call(OrdenVentaSeeder::class);
-        $this->call(EgresoSeeder::class);
-        $this->call(IngresoSeeder::class);
         $this->call(InventarioSeeder::class);
         $this->call(UtilidadSeeder::class);
         $this->call(UserSeeder::class);

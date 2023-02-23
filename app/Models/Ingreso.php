@@ -11,15 +11,16 @@ class Ingreso extends Model
 
     protected $fillable = [
         'id',
-        'ingreso',
-        'id_ventas'
+        'ingreso'
     ];
 
     public function ventas_ingresos_Rel(){
-        return $this->belongsTo(Venta::class,'id_ventas');
+        return $this->hasMany(Venta::class,'id_ventas');
     }
 
-    public function egresos_ingresos_Rel(){
-        return $this->belongsToMany(Egreso::class,'utilidades');
+
+
+    public function utilidades_ingresos_Rel(){
+        return $this->hasOne(Utilidad::class,'id_utilidades');
     }
 }

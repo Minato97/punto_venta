@@ -15,11 +15,6 @@ return new class extends Migration
     {
         Schema::create('egresos', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('id_compras')
-                ->nullable()
-                ->constrained('compras')
-                ->cascadeOnUpdate()
-                ->nullOnDelete();
             $table->decimal('egreso');
             $table->timestamps();
         });

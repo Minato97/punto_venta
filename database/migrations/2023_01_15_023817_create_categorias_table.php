@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('categorias_productos', function (Blueprint $table) {
             $table->id();
-            $table->string('categoria');
+            $table->string('categoria_productos');
         });
     }
 

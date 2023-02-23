@@ -17,7 +17,7 @@ class CategoriaSeeder extends Seeder
     {
         $data = [
             [
-                'categoria' => 'otra'
+                'categoria_productos' => 'otra'
             ]
             ];
 

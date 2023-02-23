@@ -20,7 +20,8 @@ class CompraSeeder extends Seeder
                 'montoTotal'=>0.00,
                 'id_estatus'=>4,
                 'id_proveedores'=>1,
-                'id_descuentos'=>1
+                'id_descuentos'=>1,
+                'id_egresos'=>1
             ]
         ];
         DB::table('compras')->insert($data);

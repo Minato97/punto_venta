@@ -17,7 +17,7 @@ class IngresoSeeder extends Seeder
     {
         $data = [
             [
-                'id_ventas'=>1,
+
                 'ingreso'=>0.00
             ]
         ];

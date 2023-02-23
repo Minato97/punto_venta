@@ -17,7 +17,7 @@ class VentasController extends Controller
      */
     public function index()
     {
-        $data = Venta::with('clientes_ventas_Rel','estatusComprasVentas_ventas_Rel','descuentos_ventas_Rel','categoriaFactura_ventas_Rel')->get();
+        $data = Venta::with('clientes_ventas_Rel','estatusComprasVentas_ventas_Rel','descuentos_ventas_Rel','categoriaFactura_ventas_Rel','ordenVentas_ventas_Rel')->get();
         return $data;
     }
 

@@ -17,7 +17,7 @@ class ClienteSeeder extends Seeder
     {
         $data = [
             [
-                'nombre'=> 'Público en general',
+                'nombre_cliente'=> 'Público en general',
                 'telefono' => 'No aplica',
                 'calle' => 'No aplica',
                 'numero' => 00,

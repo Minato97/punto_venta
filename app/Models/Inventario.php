@@ -14,7 +14,9 @@ class Inventario extends Model
         'stock',
         'valorMonetario',
         'id_productos',
-        'id_almacenes'
+        'id_almacenes',
+        'fecha_caducidad'
+
     ];
 
     public function productos_inventarios_Rel(){
