@@ -29,7 +29,8 @@ class VentasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Venta::create($request->all());
+        return $data;
     }
 
     /**

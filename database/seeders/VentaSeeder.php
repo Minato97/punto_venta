@@ -17,7 +17,7 @@ class VentaSeeder extends Seeder
     {
         $data = [
             [
-                'montoTotal'=>0.00,
+                'monto_total'=>0.00,
                 'id_clientes'=>1,
                 'id_estatus'=>1,
                 'id_categoria_factura'=>1,

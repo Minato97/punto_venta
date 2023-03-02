@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('compras', function (Blueprint $table) {
             $table->id();
-            $table->decimal('montoTotal');
+            $table->decimal('monto_total')->default(0.00);
             $table->foreignId('id_estatus')
                 ->nullable()
                 ->constrained('estatus_compras_ventas')

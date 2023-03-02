@@ -17,7 +17,7 @@ class CompraSeeder extends Seeder
     {
         $data = [
             [
-                'montoTotal'=>0.00,
+                'monto_total'=>0.00,
                 'id_estatus'=>4,
                 'id_proveedores'=>1,
                 'id_descuentos'=>1,

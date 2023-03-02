@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ventas', function (Blueprint $table) {
             $table->id();
-            $table->decimal('montoTotal');
+            $table->decimal('monto_total')->default(0.00);
             $table->foreignId('id_clientes')
                 ->nullable()
                 ->constrained('clientes')

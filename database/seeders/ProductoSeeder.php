@@ -16,15 +16,15 @@ class ProductoSeeder extends Seeder
      */
     public function run()
     {
-//        $data = [
-//            [
-//                'producto' => 'otro',
-//                'precio' => 0.00,
-//                'id_categorias' => 1,
-//                'costo'=>0.00,
-//            ]
-//        ];
-//        DB::table('productos')->insert($data);
+        $data = [
+            [
+                'producto' => 'otro',
+                'precio' => 0.00,
+                'id_categorias' => 1,
+                'costo'=>0.00,
+            ]
+        ];
+        DB::table('productos')->insert($data);
         Producto::factory(50)->create();
     }
 }
