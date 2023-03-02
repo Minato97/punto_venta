@@ -7,12 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 
 class Producto extends Model
 {
+    use HasFactory;
     protected $table = 'productos';
     protected $fillable = [
         'id',
         'producto',
         'precio',
-        'id_categorias'
+        'id_categorias',
+        'costo'
     ];
     public function categoriasProductos_productos_Rel(){
         return $this->belongsTo(CategoriaProductos::class,'id_categorias');

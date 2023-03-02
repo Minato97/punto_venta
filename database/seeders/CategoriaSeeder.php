@@ -18,6 +18,21 @@ class CategoriaSeeder extends Seeder
         $data = [
             [
                 'categoria_productos' => 'otra'
+            ],
+            [
+                'categoria_productos' => 'Abarrotes'
+            ],
+            [
+                'categoria_productos' => 'Lacteos'
+            ],
+            [
+                'categoria_productos' => 'Carnes'
+            ],
+            [
+                'categoria_productos' => 'Frutas y Verduras'
+            ],
+            [
+                'categoria_productos' => 'Limpieza'
             ]
             ];
 
