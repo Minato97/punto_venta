@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('egresos', function (Blueprint $table) {
             $table->id();
-            $table->decimal('egreso');
+            $table->decimal('egreso')->default(0.00);
             $table->timestamps();
         });
     }

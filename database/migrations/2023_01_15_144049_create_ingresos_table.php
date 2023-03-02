@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('ingresos', function (Blueprint $table) {
             $table->id();
-            $table->decimal('ingreso');
+            $table->decimal('ingreso')->default(0.00);
             $table->timestamps();
         });
     }

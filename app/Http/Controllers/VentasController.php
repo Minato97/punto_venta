@@ -29,7 +29,8 @@ class VentasController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = Venta::create($request->all());
+        return $data;
     }
 
     /**
@@ -52,7 +53,12 @@ class VentasController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $data = Venta::find($id);
+        if (is_null($data)) {
+            return response()->json(['mensaje' => 'Registro no Encontrado']);
+        }
+        $data->update($request->all());
+        return $data;
     }
 
     /**

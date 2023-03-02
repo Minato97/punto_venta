@@ -29,7 +29,13 @@ class OrdenesVentaController extends Controller
      */
     public function store(Request $request)
     {
-        //
+//        dd($request['productos']);
+        $data=[];
+        foreach ($request['productos'] as $key => $item){
+        array_push($data, OrdenDeVenta::create($request['productos'][$key]));
+
+        }
+        return $data;
     }
 
     /**

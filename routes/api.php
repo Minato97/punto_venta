@@ -33,7 +33,7 @@ Route::group([
 
 });
 
-
+//------------APIS GET ALL------------
 Route::get('categoriasFacturas', 'App\Http\Controllers\CategoriasFacturasController@index');
 Route::get('productos', 'App\Http\Controllers\ProductosController@index');
 Route::get('almacenes', 'App\Http\Controllers\AlmacenesController@index');
@@ -51,3 +51,10 @@ Route::get('proveedores','App\Http\Controllers\ProveedoresController@index');
 Route::get('roles','App\Http\Controllers\RolesController@index');
 Route::get('utilidades','App\Http\Controllers\UtilidadesController@index');
 Route::get('ventas','App\Http\Controllers\VentasController@index');
+
+
+//------------APIS PARA VENTAS-----------------
+Route::post('crearVentas','App\Http\Controllers\VentasController@store');
+Route::post('crearIngresos','App\Http\Controllers\IngresosController@store');
+Route::post('crearOrdenesVenta','App\Http\Controllers\OrdenesVentaController@store');
+Route::post('ventasUpdate/{id}','App\Http\Controllers\VentasController@update');

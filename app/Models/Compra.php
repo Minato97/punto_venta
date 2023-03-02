@@ -13,7 +13,7 @@ class Compra extends Model
         'id',
         'id_proveedores',
         'id_estatus',
-        'montoTotal',
+        'monto_total',
         'id_descuentos',
         'id_egresos'
     ];
