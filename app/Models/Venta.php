@@ -41,6 +41,6 @@ public function estatusComprasVentas_ventas_Rel(){
         return $this->belongsTo(CategoriaFatctura::class,'id_categoria_factura');
     }
     public function ordenVentas_ventas_Rel(){
-        return $this->hasMany(OrdenDeVenta::class,'id');
+        return $this->hasMany(OrdenDeVenta::class,'id_ventas');
     }
 }
